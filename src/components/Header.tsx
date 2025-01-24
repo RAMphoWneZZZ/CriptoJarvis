@@ -1,21 +1,24 @@
 import React from 'react';
-import { Brain, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 export function Header() {
-  const { isDark, toggleTheme } = useTheme();
+  const { isDark, toggleTheme } = useTheme(); // Detectar tema y función para alternar
 
   return (
     <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Brain className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-            <h1 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 ml-2">
-              CriptoJarviS
-            </h1>
+            {/* Cambiar logo según el tema */}
+            <img
+              src={isDark ? "src/images/CriptoJarvis-Logo.png" : "src/images/CriptoJarvis-Logo-Negativo.png"}
+              alt="CriptoJarviS Logo"
+              className="w-1/5 h-1/5"
+            />
           </div>
-          
+
+          {/* Botón para alternar tema */}
           <button 
             onClick={toggleTheme}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"

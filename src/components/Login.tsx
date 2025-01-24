@@ -30,10 +30,12 @@ export function Login() {
     <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100 dark:bg-gray-900">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md">
         <div className="flex flex-col items-center mb-8">
-          <Brain className="w-16 h-16 text-indigo-600 dark:text-indigo-400" />
-          <h1 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white">
-            CriptoJarviS
-          </h1>
+           {/* Cambiar logo según el tema */}
+           <img
+              src={isDark ? "src/images/CriptoJarvis-Logo.png" : "src/images/CriptoJarvis-Logo-Negativo.png"}
+              alt="CriptoJarviS Logo"
+              className="w-1/5 h-1/5"
+            />
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Tu plataforma de trading inteligente
           </p>
